@@ -1,0 +1,22 @@
+options(repos = c(RStudio = 'http://rstudio.org/_packages',  getOption('repos')))
+install.packages('shiny',repos="http://cran.r-project.org")
+library(shiny)
+runExample()
+runExample("01_hello")
+runExample("02_text")
+runExample("03_reactivity")
+runExample("04_mpg")
+runExample("05_sliders")
+runExample("07_widgets")
+runExample("06_tabsets")
+runExample("08_html")
+runExample("09_upload")
+runExample("10_download")
+options(shiny.maxRequestSize=30*1024^2)#######最大要求5M
+fileInput(inputId, label, multiple = FALSE, accept = NULL)
+shiny::runApp("E:/Rfile/myApp/05")
+setwd("E:/Rfile/myApp")######设置工作目录
+counties <-readRDS("07/data/counties.rds")
+
+runGitHub( "hello_shiny", "qihu1301635668")
+devtools::install_github('shinyapps')
